@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background: url('bg.jpg');
+			color: white;
+			font-family: Calibri;
+			font-style: italic;
+		}
+		
+		h1{
+			font-size: 70px;
+			text-shadow: 2px 1px 5px black;
+		}
+		#menu,#feeds{
+			float: left;
+		}
+		
+		#feeds {
+			background: rgba(10,255,210, 0.2);
+			width: 600px;
+			margin-left: 60px;
+			padding: 10px;
+			-moz-border-radius:5px;
+			border-radius: 5px;
+			-webkit-box-shadow: 1px 1px 3px black;
+			-moz-box-shadow: 1px 1px 3px black;
+		}
+			
+		.rssBody b {
+			font-size: 10px
+		}
+		a{
+			text-decoration:none;
+			color: cyan;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		.marker{
+			font-size:11px;
+		}
+	</style>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery.zrssfeed.js" type="text/javascript"></script>
+	<script src="script.js" type="text/javascript"></script>
+	
+</head>
+<body>
+	<h1> RSS Feed Reader </h1>
+	<div id='menu'>
+		<input type='text' id='feedstxt' name='feedtxt'/><br/>
+		<button name='feedbtn' onclick='feedadder();' > Add Feed </button>
+		<ul id='subscribed_list'>
+		<b>Subscribed Links </b>
+		</ul>
+	</div>
+	
+	<div id='feeds'>
+		<b>Feeds</b>
+	</div>
+	ex: http://feeds2.feedburner.com/webdesignerdepot?format=xml
+</body>
+</html>
